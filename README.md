@@ -49,3 +49,4 @@ It can be tricky to simply schedule something on Google Cloud. If you have your 
                imagePullPolicy: IfNotPresent            
              restartPolicy: OnFailure
     ```
+- Finally, lets come to what I actually recommend doing. The Kubernetes cluster approach will definitely work, but the option to use Cloud Run is a bit easier to me. For this method, you need a Dockerfile as well, and then all you need to do is gcloud run deploy from the command shell. [This article](https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-python-service) guides you through the process. Cloud Run has a 60 mins max timeout, compared to Cloud Functions, which only has 9 mins
